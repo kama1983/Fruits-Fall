@@ -1,0 +1,83 @@
+   body{
+   margin:0;
+   }
+
+
+   #start{
+   border-radius: 50px;
+   text-decoration: none;
+   margin:auto;
+   background: #3d3d99;
+   color: white;
+   padding: 21px;
+   } 
+
+
+   #soundplay{
+
+   }
+
+   #win{
+       font:30px impact;
+       display:none;
+       font-weight:bold;
+       position:absolute;
+       top:200px;
+       margin:auto;
+       left:150px;
+       z-index:10000;
+       color:orange;
+       text-shadow:1px 1px 1px black;
+   }
+
+   #collectcoins{
+       font:30px impact;
+       display:none;
+       font-weight:bold;
+       position:absolute;       
+       margin:auto;
+       top:150px;
+       left:100px;
+       z-index:100;
+       color:green;
+       text-shadow:1px 1px 1px black;
+   }
+
+   #screen{
+   position:absolute;
+   top:150px;
+   left:100px;       margin:auto;
+
+   display:none;
+   text-align:center;
+   }
+
+   #text{
+   font-size:25px;
+   font-family:arial;       margin:auto;
+
+   color:white;
+   }
+
+   #gameovera{           
+   border-radius: 50px;
+   text-decoration: none;       margin:auto;
+
+   background: #3d3d99;
+   color: white;
+   padding: 21px;
+   }
+
+   #gameovertext{
+   font-size:25px;
+   font-family:arial;       margin:auto;
+
+   color:white;
+   }
+
+   #gameover{
+   position:absolute;         margin:auto;
+        
+   top:150px;
+   left:150px;
+   }
