@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title></title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script type='text/javascript' src="assets/js/main/p5.js"></script>
+    <script type='text/javascript' src="assets/js/main/p5.play.js"></script>
+    <script type='text/javascript' src="assets/js/main/p5.sound.js"></script>
+    <script type="text/javascript" src='assets/js/files/game.js'></script>
+    <script type="text/javascript" src='assets/js/files/fruits.js'></script>
+    <script type="text/javascript" src='assets/js/files/blocks.js'></script> 
+    <script type="text/javascript" src='assets/js/files/score.js'></script>
+    <script type="text/javascript" src='assets/js/files/player.js'></script>
+    <script type="text/javascript" src='assets/js/files/coins.js'></script>
+</head>       
+<body>
+    <div id='screen'>
+        <h3 id='text'>Welcome To Help Me</h3>
+        <a id='start' href='#' onclick='game.loop = false;game.start();'>Start Game</a>
+    </div>
+    <div id='gameover'>
+        <h4 id='gameovertext'>
+            <center>Game Over<br>
+            Your Score:0</center>
+        </h4>
+    </div>
+
+    <div id='win'>
+        <h4>
+            You Are Won!
+        </h4>
+    </div>
+    <div id='collectcoins'>
+         <h4>Greet Collect Coins!!</h4>
+    </div>
+	<script type="text/javascript">
+     function preload()
+     {       
+        coins.coinsound(); 
+        fruits.fruitsound();
+        setInterval(coins.drawTime,10000); 
+        game.audio();
+     }
+
+     function setup()
+     {
+        createCanvas(300,450);         
+        groundImg = loadImage('assets/imgs/background.png'); 
+        ground = createSprite(width/2,height/2,width,height); 
+        ground.addImage(groundImg);        
+        game.audiorun();
+        game.start();
+     }
+
+     function draw()
+     {       
+         game.drawAnimation();  
+         blocks.drawtime();
+         game.draw();
+     }
+	</script>
+</body>
+</html>
